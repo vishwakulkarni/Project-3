@@ -1,14 +1,39 @@
 package tools;
 
-public class Concrete {
-	private String name;
+public class Concrete extends Tool{
 
-	public Concrete(String name) {
-		super();
+	static final  int price = 6;
+	
+	static int count = 5;
+	
+	private  Concrete(String name,int nytNo){
 		this.name = name;
+		this.nytNo=nytNo;
+	}
+	
+	public static Concrete getInstance(String name,int nytNo) {
+		
+		if(count >= 1) {
+			count--;
+			return new Concrete(name,nytNo);
+		}
+		else {
+			return null;
+		}
+		
 	}
 
-	public String getName() {
-		return name;
+	@Override
+	public int getPrice() {
+		
+		return price*nytNo;
 	}
+	
+	@Override
+	public void increaseCount() {
+		
+		 count = count+1;
+	}
+	
+	
 }
