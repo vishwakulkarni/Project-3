@@ -2,8 +2,10 @@ package Customers;
 
 public class CasualCustomers {
 
-	public CasualCustomers() {
-		// TODO Auto-generated constructor stub
+	private String name;
+	
+	public CasualCustomers(String name) {
+		this.name = name;
 	}
 
 }

@@ -1,14 +1,16 @@
 package tools;
 
-public class Concrete {
+public class Concrete implements Tools{
+	
 	private String name;
-
-	public Concrete(String name) {
-		super();
+	
+	public Concrete(String name)
+	{
 		this.name = name;
 	}
-
-	public String getName() {
-		return name;
+	
+	public double cost()
+	{
+		return 1.00;
 	}
 }
