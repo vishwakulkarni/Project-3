@@ -10,6 +10,7 @@ import Accessory.AccessoryKit;
 import Accessory.ExtensionCord;
 import Accessory.ProtectiveGearPack;
 import Customers.Customer;
+import Rental.Record;
 import factory.CustomerFactory;
 import factory.ToolFactory;
 import myObserver.DisplayObserver;
@@ -44,16 +45,16 @@ public class HardwareRentalStore {
 		}
 		Inventory toolsInventory = new Inventory(paintings,plubings,concretes,Woodworks,yardworks);
 		
-		System.out.println("Store Opens on Day 1");
-		System.out.println("---------------------");
-		System.out.println("customer walks in : ");
 		Dictionary cashMade = new Hashtable(); 
 		//display Observer and registering it
 		DisplayObserver displayStoreDetails = new DisplayObserver();
-		StoreDetails details = new StoreDetails();
+		StoreDetails details = new StoreDetails(toolsInventory);
 		details.registerObserver(displayStoreDetails);
 		Scanner in = new Scanner(System.in);
 		while(true){
+			System.out.println("Store Opens on Day"+String.valueOf(details.getDay()));
+			System.out.println("---------------------");
+			System.out.println("customer walks in : ");
 			displayStoreDetails.display();
 			System.out.println("please provide your id : ");
 			@SuppressWarnings("resource")
@@ -81,6 +82,8 @@ public class HardwareRentalStore {
 			System.out.println("How many Days do you want to take it:");
 			int days = in.nextInt();
 			System.out.println("please pay this much amount :"+days*myTool.getPrice());
+			Record newRecord = new Record(temp, myTool, days, days);
+			details.updateActiveRecords(newRecord);
 			System.out.println("Are there more customers? 1 for y 2 for n");
 			int temp1 = in.nextInt();
 			if(temp1 == 1) {

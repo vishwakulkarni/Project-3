@@ -1,11 +1,11 @@
 package myObserver;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
 import Rental.Record;
+import tools.Inventory;
 
 public class StoreDetails implements Subject {
 	
@@ -13,18 +13,19 @@ public class StoreDetails implements Subject {
 	int daysEarning;
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
-	HashMap <String,Integer> toolsRemaining = new HashMap<String, Integer>();
+	Inventory inventory;
 	
 	ArrayList<Observer> observerList;
 
-	public StoreDetails() {
+	public StoreDetails(Inventory inventory) {
 		// TODO Auto-generated constructor stub
 		observerList = new ArrayList<Observer>();
-		toolsRemaining.put("Concrete", 5);
+		this.inventory = inventory;
+		/*toolsRemaining.put("Concrete", 5);
 		toolsRemaining.put("Painting", 5);
 		toolsRemaining.put("Plumbing", 5);
 		toolsRemaining.put("Woodwork", 5);
-		toolsRemaining.put("Yardwork", 4);
+		toolsRemaining.put("Yardwork", 4);*/
 		day = 1;
 		daysEarning = 0;
 		
@@ -43,18 +44,24 @@ public class StoreDetails implements Subject {
     @Override
     public void notifyObservers() 
     { 
-        for (Iterator<Observer> it = 
-              observerList.iterator(); it.hasNext();) 
+        for (Iterator<Observer> it = observerList.iterator(); it.hasNext();) 
         { 
             Observer o = it.next(); 
-            o.update(day,daysEarning,completedOrders,activeOrder,toolsRemaining); 
+            o.update(day,daysEarning,completedOrders,activeOrder,inventory); 
         } 
     }
     
-    public void updateTools(String toolType) {
+    public void updateTools(Inventory inventory) {
     	System.out.println("updating tools");
-    	
-    	toolsRemaining.put(toolType, toolsRemaining.get(toolType) - 1);
+    	this.inventory = inventory;
+    }
+    
+    public void updateActiveRecords(Record newrechord) {
+    	activeOrder.add(newrechord);
+    }
+    
+    public int getDay() {
+    	return day;
     }
     
     public void dayChanged() {

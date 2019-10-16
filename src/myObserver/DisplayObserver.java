@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import Rental.Record;
+import tools.Inventory;
 
 public class DisplayObserver implements Observer {
 	
@@ -12,7 +13,7 @@ public class DisplayObserver implements Observer {
 	int daysEarning;
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
-	HashMap <String,Integer> toolsRemaining = new HashMap<String, Integer>();
+	Inventory inventory;
 
 	public DisplayObserver() {
 		// TODO Auto-generated constructor stub
@@ -20,12 +21,12 @@ public class DisplayObserver implements Observer {
 
 	@Override
 	public void update(int day, int daysEarning, List<Record> completedOrders, List<Record> activeOrder,
-			HashMap<String, Integer> toolsRemaining) {
+			Inventory inventory) {
 		this.day = day;
 		this.daysEarning = daysEarning;
 		this.completedOrders = completedOrders;
 		this.activeOrder = activeOrder;
-		this.toolsRemaining = toolsRemaining;
+		this.inventory = inventory;
 		System.out.println("updating from displayOvserver");
 		
 	}
