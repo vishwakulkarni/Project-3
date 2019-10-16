@@ -2,7 +2,7 @@ package Customers;
 
 import java.util.List;
 
-import Rental.RentalRecord;
+import Rental.Record;
 
 public abstract class Customer {
 
@@ -10,7 +10,7 @@ public abstract class Customer {
 	public String getName() {
 		return name;
 	}
-	List<RentalRecord> rr;
+	List<Record> rr;
 	String CustomerType;
 	public String getCustomerType() {
 		return CustomerType;
