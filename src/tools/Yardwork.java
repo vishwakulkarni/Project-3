@@ -1,17 +1,20 @@
 package tools;
 
-public class Yardwork extends Tool{
+public class Yardwork implements Tool{
 
 	static final int price = 8;
 	
 	static int count = 4;
+	public String type = "Yardwork";
+	public String name;
+	int nytNo;
 	
 	private Yardwork(String name,int nytNo){
 		this.name=name;
 		this.nytNo = nytNo;
 	}
 	
-	public static Yardwork getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name,int nytNo) {
 		
 		if(count >= 1) {
 			count--;
@@ -21,6 +24,10 @@ public class Yardwork extends Tool{
 			return null;
 		}
 		
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	@Override

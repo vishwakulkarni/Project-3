@@ -1,17 +1,20 @@
 package tools;
 
-public class Painting extends Tool{
+public class Painting implements Tool{
 
 	public static final int price = 5;
-	
+	public String name;
 	public static int count = 5;
+	public String type = "Painting";
+	int nytNo;
 	
 	private Painting(String name,int nytNo){
 		this.name=name;
 		this.nytNo=nytNo;
+		
 	}
 	
-	public static Painting getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name,int nytNo) {
 		
 		if(count >= 1) {
 			count--;
@@ -21,6 +24,10 @@ public class Painting extends Tool{
 			return null;
 		}
 		
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	@Override

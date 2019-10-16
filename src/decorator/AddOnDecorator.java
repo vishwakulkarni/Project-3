@@ -2,16 +2,15 @@ package decorator;
 
 import tools.Tool;
 
-public class AddOnDecorator extends Tool {
+public class AddOnDecorator implements Tool {
 
 	 public Tool tool;
 	 public int price;
 	
 	
-	public AddOnDecorator(Tool tool,String name,int price) {
+	public AddOnDecorator(Tool tool,int price) {
 		
 		this.tool = tool;
-		this.name = name;
 		this.price = price;
 	}
 	
@@ -24,6 +23,10 @@ public class AddOnDecorator extends Tool {
 	@Override
 	public void increaseCount() {
 			
+	}
+	
+	public String getName() {
+		return null;
 	}
 
 	

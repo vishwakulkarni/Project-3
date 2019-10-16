@@ -6,6 +6,7 @@ import java.util.List;
 
 import Rental.Record;
 import tools.Inventory;
+import tools.Tool;
 
 public class StoreDetails implements Subject {
 	
@@ -64,6 +65,10 @@ public class StoreDetails implements Subject {
     	return day;
     }
     
+    public void setDay(int day) {
+    	this.day = day;
+    }
+    
     public void dayChanged() {
     	day = day + 1;
     	//save days earning in an hashmap
@@ -72,5 +77,28 @@ public class StoreDetails implements Subject {
     	// completed order parse
     	notifyObservers();
     	
+    }
+    
+    public void updateDaysEarning(int earning)
+    {
+    	this.daysEarning = earning;
+    }
+    
+    public Inventory checkExpiredOrder(Inventory toolsInventory)
+    {
+    	for (Record aRecord : activeOrder)
+		{
+			if(aRecord.daysRemaining == 1)
+			{
+				completedOrders.add(aRecord);
+				activeOrder.remove(aRecord);
+				//toolsInventory.updateInventory(aRecord.tool,"add");
+			}
+			else
+			{
+				aRecord.daysRemaining--;
+			}
+		}
+    	return toolsInventory;
     }
 }

@@ -43,6 +43,7 @@ public class HardwareRentalStore {
 		for (int i=0;i<4;i++) {
 			yardworks.add((Yardwork)ToolFactory.getTool("Yardwork", "Yardwork tool "+String.valueOf(i), 1));
 		}
+		
 		Inventory toolsInventory = new Inventory(paintings,plubings,concretes,Woodworks,yardworks);
 		
 		Dictionary cashMade = new Hashtable(); 
@@ -51,6 +52,7 @@ public class HardwareRentalStore {
 		StoreDetails details = new StoreDetails(toolsInventory);
 		details.registerObserver(displayStoreDetails);
 		Scanner in = new Scanner(System.in);
+		/*
 		while(true){
 			System.out.println("Store Opens on Day"+String.valueOf(details.getDay()));
 			System.out.println("---------------------");
@@ -98,6 +100,87 @@ public class HardwareRentalStore {
 				
 			
         }
+		*/
+		System.out.println("Store Opens on Day "+ String.valueOf(details.getDay()));
+		System.out.println("---------------------");
+		System.out.println("Completed Rental:");
+		System.out.println("Count = 0");
+		System.out.println("Active Rental:");
+		System.out.println("Count = 0");
+		System.out.println("Active Rental:");
+		System.out.println("Count = 0");
+		System.out.println("Tools left in the store:");
+		System.out.println("Count = 24");
+		toolsInventory.getPaintingTool();
+		toolsInventory.getPlumbingTool();
+		toolsInventory.getConcreteTool();
+		toolsInventory.getWoodworkTool();
+		toolsInventory.getYardworkTool();
+		
+		// Add a active record for day 1
+		
+		Customer temp = CustomerFactory.getCustomerWithId(6);
+		// System.out.println("Welcome customer:"+temp.getName()+" Your are a "+temp.getCustomerType());
+		Painting tool_day1 = paintings.get(0);
+		// System.out.println(tool_day1.getName());
+		toolsInventory.updatePaintingInventory(tool_day1,"delete");
+		Tool tool_day1_option = new AccessoryKit(tool_day1); // update price of each day with tool_day1_option.getPrice();
+		
+		// System.out.println(tool_day1.getPrice());
+		
+		Record rec_d1_1 = new Record(temp,tool_day1,2,2);  // Need to change record with list of tools
+		details.updateActiveRecords(rec_d1_1);
+		details.updateDaysEarning(tool_day1_option.getPrice());
+		// toolsInventory.updatePaintInventory(tool_day1,"add");
+		System.out.println("Store Opens on Day 2 ");
+		toolsInventory.getPaintingTool();
+		toolsInventory.getPlumbingTool();
+		toolsInventory.getConcreteTool();
+		toolsInventory.getWoodworkTool();
+		toolsInventory.getYardworkTool();
+		
+		// Day 2 starts
+		details.dayChanged();
+		
+		// Check for order expire today in Active orders
+		toolsInventory = details.checkExpiredOrder(toolsInventory);
+		
+		// Add new customer in Active orders and update inventory
+		temp = CustomerFactory.getCustomerWithId(2);
+		Tool tool_day2 = concretes.get(0);
+		// toolsInventory.updateInventory(tool_day2,"delete");
+		// Add option
+		Tool tool_day2_option = new ExtensionCord(tool_day2); 
+		
+		// Add into active record
+		Record rec_d2_1 = new Record(temp,tool_day2,3,3);
+		details.updateActiveRecords(rec_d2_1);
+		details.updateDaysEarning(tool_day2_option.getPrice());
+		
+		
+		
+		// Day 3 Starts
+		
+		details.dayChanged();
+		
+		// Check for order expire today in Active orders
+		toolsInventory = details.checkExpiredOrder(toolsInventory);
+		
+		// Add new customer in Active orders and update inventory
+		temp = CustomerFactory.getCustomerWithId(3);
+		Tool tool_day3 = concretes.get(3);
+		//toolsInventory.updateInventory(tool_day2,"delete");
+		// Add option
+		Tool tool_day3_option = new ExtensionCord(tool_day2); 
+		
+		// Add into active record
+		Record rec_d3_1 = new Record(temp,tool_day3,2,2);
+		details.updateActiveRecords(rec_d3_1);
+		details.updateDaysEarning(tool_day2_option.getPrice());
+		
+		
+		
+		
 
 	}
 

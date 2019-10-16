@@ -1,17 +1,20 @@
 package tools;
 
-public class Woodwork extends Tool{
+public class Woodwork implements Tool{
 
 	static final int price = 8;
 	
 	static int count = 5;
+	public String type = "Woodwork";
+	public String name;
+	int nytNo;
 	
 	private Woodwork(String name,int nytNo){
 		this.name=name;
 		this.nytNo = nytNo;
 	}
 	
-	public static Woodwork getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name,int nytNo) {
 		
 		if(count >= 1) {
 			count--;
@@ -21,6 +24,10 @@ public class Woodwork extends Tool{
 			return null;
 		}
 		
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	@Override

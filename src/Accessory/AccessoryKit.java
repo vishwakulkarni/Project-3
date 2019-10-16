@@ -7,8 +7,8 @@ public class AccessoryKit extends AddOnDecorator{
 
 	static final int price = 18;
 	
-	public AccessoryKit(Tool tool, String name) {
-		super(tool, name, price);
+	public AccessoryKit(Tool tool) {
+		super(tool, price);
 	}
 
 	
