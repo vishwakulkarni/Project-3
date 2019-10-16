@@ -14,8 +14,8 @@ public class Concrete extends Tool{
 	public static Concrete getInstance(String name,int nytNo) {
 		
 		if(count >= 1) {
-			count--;
-			return new Concrete(name,nytNo);
+			count = count-1;
+			return new Concrete(name+count,nytNo);
 		}
 		else {
 			return null;
