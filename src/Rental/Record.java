@@ -17,9 +17,10 @@ public class Record {
 	}
 	
 	public void print() {
-		System.out.println("Customer name"+this.customer.getName());
-		System.out.println("Tool taken"+this.tool.name);
-		System.out.println("Days take"+String.valueOf(daysTaken));
-		System.out.println("Days remaining"+String.valueOf(daysTaken));
+		System.out.println("Customer name "+this.customer.getName());
+		System.out.println("Tool taken "+this.tool.getName());
+		System.out.println("AddOn taken "+this.tool.getAddOn());
+		System.out.println("Days take "+String.valueOf(daysTaken));
+		System.out.println("Days remaining "+String.valueOf(daysTaken));
 	}
 }

@@ -6,6 +6,7 @@ import java.util.List;
 
 import Rental.Record;
 import tools.Inventory;
+import tools.Tool;
 
 public class StoreDetails implements Subject {
 	
@@ -15,17 +16,19 @@ public class StoreDetails implements Subject {
 	List <Record> activeOrder = new ArrayList<Record>();
 	Inventory inventory;
 	
+	public Inventory getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(Inventory inventory) {
+		this.inventory = inventory;
+	}
+
 	ArrayList<Observer> observerList;
 
 	public StoreDetails(Inventory inventory) {
-		// TODO Auto-generated constructor stub
 		observerList = new ArrayList<Observer>();
 		this.inventory = inventory;
-		/*toolsRemaining.put("Concrete", 5);
-		toolsRemaining.put("Painting", 5);
-		toolsRemaining.put("Plumbing", 5);
-		toolsRemaining.put("Woodwork", 5);
-		toolsRemaining.put("Yardwork", 4);*/
 		day = 1;
 		daysEarning = 0;
 		
@@ -64,12 +67,18 @@ public class StoreDetails implements Subject {
     	return day;
     }
     
+    public void setDay(int day) {
+    	this.day = day;
+    }
+    
     public void dayChanged() {
     	day = day + 1;
     	//save days earning in an hashmap
     	for(int i=0;i<activeOrder.size();i++) {
     		activeOrder.get(i).daysRemaining = activeOrder.get(i).daysRemaining - 1;
     		if(activeOrder.get(i).daysRemaining == 0) {
+    			Tool myTool = activeOrder.get(i).tool;
+    			inventory.updateInventory(myTool, "add");
     			completedOrders.add(activeOrder.get(i));
     			activeOrder.remove(i);
     		}
@@ -79,5 +88,25 @@ public class StoreDetails implements Subject {
     	// completed order parse
     	notifyObservers();
     	
+    }
+    
+    public void updateDaysEarning(int earning)
+    {
+    	this.daysEarning = earning;
+    }
+    
+    public Inventory checkExpiredOrder(Inventory toolsInventory)
+    {
+    	if(activeOrder.size()==0) {
+    		return toolsInventory;
+    	}
+    	for(int i=0;i<activeOrder.size();i++) {
+    		activeOrder.get(i).daysRemaining = activeOrder.get(i).daysRemaining - 1;
+    		if(activeOrder.get(i).daysRemaining == 0) {
+    			completedOrders.add(activeOrder.get(i));
+    			activeOrder.remove(i);
+    		}
+		}
+    	return toolsInventory;
     }
 }

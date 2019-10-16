@@ -32,11 +32,11 @@ public static Customer getCustomerWithId(int id) {
 	}
 	
 	for(int i=5;i<9;i++) {
-		customers.add(new RegularCustomer("C_customer_"+String.valueOf(i)));
+		customers.add(new CasualCustomer("C_customer_"+String.valueOf(i)));
 	}
 	
 	for(int i=9;i<12;i++) {
-		customers.add(new RegularCustomer("B_customer_"+String.valueOf(i)));
+		customers.add(new BusinessCustomer("B_customer_"+String.valueOf(i)));
 	}
 
 

@@ -1,17 +1,20 @@
 package tools;
 
-public class Plumbing extends Tool{
+public class Plumbing implements Tool{
 
 	static final int price = 7;
 	
 	static int count = 5;
+	public String type = "Plumbing";
+	public String name;
+	int nytNo;
 	
 	private Plumbing(String name,int nytNo){
 		this.name=name;
 		this.nytNo=nytNo;
 	}
 	
-	public static Plumbing getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name,int nytNo) {
 		
 		if(count >= 1) {
 			count--;
@@ -21,6 +24,10 @@ public class Plumbing extends Tool{
 			return null;
 		}
 		
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	@Override
@@ -34,5 +41,10 @@ public class Plumbing extends Tool{
 	public void increaseCount() {
 		
 		 count = count+1;
+	}
+	@Override
+	public String getAddOn() {
+		// TODO Auto-generated method stub
+		return "";
 	}
 }

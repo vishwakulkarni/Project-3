@@ -1,13 +1,11 @@
 package tools;
 
-public abstract class Tool {
+public interface Tool {
 
-	public Tool() {
-		// TODO Auto-generated constructor stub
-	}
-	public String name;
-	public abstract int getPrice();
-	public abstract void increaseCount();
-	int nytNo;
+	//public final String type = null;
+	public int getPrice();
+	public void increaseCount();
+	public String getName();
+	public String getAddOn();
 
 }

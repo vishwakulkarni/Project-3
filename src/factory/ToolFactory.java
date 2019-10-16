@@ -29,9 +29,9 @@ public class ToolFactory {
 	
 	public static Tool getAddOnTool(String type,String name,Tool tool) {
 	     	
-		if(type.equalsIgnoreCase("AccessoryKit")) return new AccessoryKit(tool, name);
-		if(type.equalsIgnoreCase("ExtensionCord")) return new ExtensionCord(tool, name);
-		if(type.equalsIgnoreCase("ProtectiveGearPack")) return new ProtectiveGearPack(tool, name);
+		if(type.equalsIgnoreCase("AccessoryKit")) return new AccessoryKit(tool);
+		if(type.equalsIgnoreCase("ExtensionCord")) return new ExtensionCord(tool);
+		if(type.equalsIgnoreCase("ProtectiveGearPack")) return new ProtectiveGearPack(tool);
 		else
 		return null;
 		
