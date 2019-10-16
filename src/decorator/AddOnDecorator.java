@@ -5,7 +5,7 @@ import tools.Tool;
 public class AddOnDecorator extends Tool {
 
 	 public Tool tool;
-	public int price;
+	 public int price;
 	
 	
 	public AddOnDecorator(Tool tool,String name,int price) {
@@ -23,8 +23,7 @@ public class AddOnDecorator extends Tool {
 
 	@Override
 	public void increaseCount() {
-		
-		
+			
 	}
 
 	
