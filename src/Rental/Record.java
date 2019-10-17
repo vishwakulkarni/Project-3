@@ -15,5 +15,11 @@ public class Record {
 		this.daysTaken = daysTaken;
 		this.daysRemaining = daysRemaining;
 	}
-
+	
+	public void print() {
+		System.out.println("Customer name"+this.customer.getName());
+		System.out.println("Tool taken"+this.tool.name);
+		System.out.println("Days take"+String.valueOf(daysTaken));
+		System.out.println("Days remaining"+String.valueOf(daysTaken));
+	}
 }

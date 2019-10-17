@@ -33,6 +33,15 @@ public class DisplayObserver implements Observer {
 	
 	public void display() {
 		//update this display function
+		System.out.println("Day "+String.valueOf(day));
+		System.out.println("Days Earning " + String.valueOf(day) );
+		System.out.println("Completed Orders are:");
+		for(int i=0;i<completedOrders.size();i++) {
+			completedOrders.get(i).print();
+		}
+		for(int i=0;i<completedOrders.size();i++) {
+			activeOrder.get(i).print();
+		}
 		System.out.println(day+" "+daysEarning);
 	}
 

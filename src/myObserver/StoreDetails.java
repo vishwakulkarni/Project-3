@@ -67,6 +67,13 @@ public class StoreDetails implements Subject {
     public void dayChanged() {
     	day = day + 1;
     	//save days earning in an hashmap
+    	for(int i=0;i<activeOrder.size();i++) {
+    		activeOrder.get(i).daysRemaining = activeOrder.get(i).daysRemaining - 1;
+    		if(activeOrder.get(i).daysRemaining == 0) {
+    			completedOrders.add(activeOrder.get(i));
+    			activeOrder.remove(i);
+    		}
+		}
     	daysEarning = 0;
     	//active orders parse
     	// completed order parse
