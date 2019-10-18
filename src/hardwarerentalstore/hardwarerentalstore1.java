@@ -49,6 +49,17 @@ public class hardwarerentalstore1 {
 		StoreDetails details = new StoreDetails(toolsInventory);
 		details.registerObserver(displayStoreDetails);
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		System.out.println("Store Opens on Day "+ String.valueOf(details.getDay()));
 		System.out.println("---------------------");
 		
