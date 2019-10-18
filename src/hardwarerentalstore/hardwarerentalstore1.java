@@ -26,6 +26,7 @@ public class hardwarerentalstore1 {
 		List<Concrete>  concretes= new ArrayList<Concrete> (5);
 		List<Woodwork>  Woodworks= new ArrayList<Woodwork> (5);
 		List<Yardwork>  yardworks= new ArrayList<Yardwork> (5);
+		List<Tool> toolList = new ArrayList<Tool>();
 		
 		//creating inventory
 		for(int i =0;i<5;i++) {
@@ -52,13 +53,16 @@ public class hardwarerentalstore1 {
 		Customer temp = CustomerFactory.getCustomerWithId(6);
 		//tool chosen
 		Painting tool_day1 = paintings.get(0);
-		//add on choosen
 		details.getInventory().updateInventory(tool_day1,"delete");
-		Tool tool_day1_option = new AccessoryKit(tool_day1); // update price of each day with tool_day1_option.getPrice();
-		System.out.println(tool_day1_option.getAddOn());
+		Painting tool_day2 = paintings.get(3);
+		details.getInventory().updateInventory(tool_day2,"delete");
+		Tool tool_day1_option = new AccessoryKit(tool_day1);
 		// System.out.println(tool_day1.getPrice());
+		toolList = new ArrayList<Tool>();
+		toolList.add(tool_day1_option);
+		toolList.add(tool_day2);
 		
-		Record rec_d1_1 = new Record(temp,tool_day1_option,2,2);  // Need to change record with list of tools
+		Record rec_d1_1 = new Record(temp,toolList,2,2);  // Need to change record with list of tools
 		details.updateActiveRecords(rec_d1_1);
 		details.updateDaysEarning(tool_day1_option.getPrice());
 		System.out.println("Store Opens on Day 2 ");

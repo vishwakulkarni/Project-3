@@ -35,57 +35,74 @@ public class Inventory {
 	
 	public void getPaintingTool()
 	{
+		int count = 0;
 		for (int i=0;i<5;i++)
 		{
 			if(paintingsTaken[i]==1) {
+				count = count + 1;
 				System.out.println(paintings.get(i).getName());
 			}
 			// System.out.println(painting.type);
 		}
+		System.out.println("Painting tool remaining: "+String.valueOf(count));
 	}
 	
 	public void getPlumbingTool()
 	{
+		int count = 0;
 		for (int i=0;i<5;i++)
 		{
 			if(plumbingsTaken[i]==1) {
+				count = count + 1;
 				System.out.println(plumbings.get(i).getName());
 			}
 			// System.out.println(painting.type);
 		}
+		System.out.println("Plumbing tool remaining: "+String.valueOf(count));
 	}
 	
 	public void getConcreteTool()
 	{
+		
+		int count = 0;
 		for (int i=0;i<5;i++)
 		{
+			
 			if(concretesTaken[i]==1) {
+				count = count + 1;
 				System.out.println(concretes.get(i).getName());
 			}
 			// System.out.println(painting.type);
 		}
+		System.out.println("Concrete tool remaining: "+String.valueOf(count));
 	}
 	
 	public void getWoodworkTool()
 	{
+		int count = 0;
 		for (int i=0;i<5;i++)
 		{
 			if(woodworksTaken[i]==1) {
+				count = count + 1;
 				System.out.println(woodworks.get(i).getName());
 			}
 			// System.out.println(painting.type);
 		}
+		System.out.println("Woodwork tool remaining: "+String.valueOf(count));
 	}
 	
 	public void getYardworkTool()
 	{
+		int count = 0;
 		for (int i=0;i<4;i++)
 		{
 			if(yardworksTaken[i]==1) {
+				count = count + 1;
 				System.out.println(yardworks.get(i).getName());
 			}
 			// System.out.println(painting.type);
 		}
+		System.out.println("Yardwork tool remaining: "+String.valueOf(count));
 	}
 	
 	public void display() {

@@ -77,8 +77,11 @@ public class StoreDetails implements Subject {
     	for(int i=0;i<activeOrder.size();i++) {
     		activeOrder.get(i).daysRemaining = activeOrder.get(i).daysRemaining - 1;
     		if(activeOrder.get(i).daysRemaining == 0) {
-    			Tool myTool = activeOrder.get(i).tool;
-    			inventory.updateInventory(myTool, "add");
+    			
+    			List<Tool> myTool = activeOrder.get(i).tool;
+    			for(int i1=0;i1<myTool.size();i1++) {
+    				inventory.updateInventory(myTool.get(i1), "add");
+    			}
     			completedOrders.add(activeOrder.get(i));
     			activeOrder.remove(i);
     		}
