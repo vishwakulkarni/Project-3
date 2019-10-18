@@ -1,7 +1,5 @@
 package Accessory;
 
-import java.io.ObjectInputStream.GetField;
-
 import decorator.AddOnDecorator;
 import tools.Tool;
 

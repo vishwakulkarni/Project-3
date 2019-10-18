@@ -26,7 +26,7 @@ import tools.Yardwork;
 public class HardwareRentalStore {
 
 	public static void main(String[] args) {
-		
+		/*
 		List<Painting> paintings = new ArrayList<Painting> (5);
 		List<Plumbing>  plubings= new ArrayList<Plumbing> (5);
 		List<Concrete>  concretes= new ArrayList<Concrete> (5);
@@ -98,7 +98,7 @@ public class HardwareRentalStore {
 				
 			
         }
-		*/
+		
 		System.out.println("Store Opens on Day "+ String.valueOf(details.getDay()));
 		System.out.println("---------------------");
 		
@@ -159,7 +159,7 @@ public class HardwareRentalStore {
 		
 		
 		
-		
+		*/
 
 	}
 
