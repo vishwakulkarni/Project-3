@@ -1,5 +1,6 @@
 package hardwarerentalstore;
 
+import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +28,9 @@ public class hardwarerentalstore1 {
 		List<Woodwork>  Woodworks= new ArrayList<Woodwork> (5);
 		List<Yardwork>  yardworks= new ArrayList<Yardwork> (5);
 		List<Tool> toolList = new ArrayList<Tool>();
-		
+		int []earnings = new int[31];
+		int price = 0;
+
 		//creating inventory
 		for(int i =0;i<5;i++) {
 			paintings.add((Painting)ToolFactory.getTool("Painting", "Painting tool "+String.valueOf(i), 1));
@@ -63,15 +66,27 @@ public class hardwarerentalstore1 {
 		toolList.add(tool_day2);
 		
 		Record rec_d1_1 = new Record(temp,toolList,2,2);  // Need to change record with list of tools
+		price = price + rec_d1_1.getPrice();
 		details.updateActiveRecords(rec_d1_1);
-		details.updateDaysEarning(tool_day1_option.getPrice());
+		earnings[details.getDay()] = price;
+		details.updateDaysEarning(earnings[details.getDay()]);
 		System.out.println("Store Opens on Day 2 ");
 		System.out.println("---------------------");
+		earnings[details.getDay()] = price;
 		// Day 2 starts
+		price = 0;
 		details.dayChanged();
+		earnings[details.getDay()] = price;
+		price = 0;
 		details.dayChanged();
+		earnings[details.getDay()] = price;
+		price = 0;
 		details.dayChanged();
+		earnings[details.getDay()] = price;
+		price = 0;
 		details.dayChanged();
+		earnings[details.getDay()] = price;
+		price = 0;
 		System.out.println("---------------------");
 
 	}

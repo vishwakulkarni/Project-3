@@ -11,7 +11,7 @@ import tools.Tool;
 public class StoreDetails implements Subject {
 	
 	int day;
-	int daysEarning;
+	int []daysEarning = new int[31];
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
 	Inventory inventory;
@@ -30,7 +30,8 @@ public class StoreDetails implements Subject {
 		observerList = new ArrayList<Observer>();
 		this.inventory = inventory;
 		day = 1;
-		daysEarning = 0;
+		daysEarning[1] = 0;
+		daysEarning[1] = 0;
 		
 	}
   
@@ -86,7 +87,7 @@ public class StoreDetails implements Subject {
     			activeOrder.remove(i);
     		}
 		}
-    	daysEarning = 0;
+    	daysEarning[day] = 0;
     	//active orders parse
     	// completed order parse
     	notifyObservers();
@@ -95,7 +96,7 @@ public class StoreDetails implements Subject {
     
     public void updateDaysEarning(int earning)
     {
-    	this.daysEarning = earning;
+    	this.daysEarning[day] = earning;
     }
     
     public Inventory checkExpiredOrder(Inventory toolsInventory)

@@ -10,7 +10,7 @@ import tools.Inventory;
 public class DisplayObserver implements Observer {
 	
 	int day;
-	int daysEarning;
+	int []daysEarning = new int[31];
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
 	Inventory inventory;
@@ -20,7 +20,7 @@ public class DisplayObserver implements Observer {
 	}
 
 	@Override
-	public void update(int day, int daysEarning, List<Record> completedOrders, List<Record> activeOrder,
+	public void update(int day, int []daysEarning, List<Record> completedOrders, List<Record> activeOrder,
 			Inventory inventory) {
 		this.day = day;
 		this.daysEarning = daysEarning;
@@ -36,7 +36,7 @@ public class DisplayObserver implements Observer {
 		//update this display function
 		System.out.println("---------------------");
 		System.out.println("Day "+String.valueOf(day));
-		System.out.println("Days Earning " + String.valueOf(day) );
+		System.out.println("Days Earning " + String.valueOf(daysEarning[day-1]) );
 		System.out.println("Completed Orders are: "+String.valueOf(completedOrders.size())+" count");
 		for(int i=0;i<completedOrders.size();i++) {
 			completedOrders.get(i).print();

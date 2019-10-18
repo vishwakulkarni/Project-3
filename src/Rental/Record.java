@@ -29,4 +29,12 @@ public class Record {
 		System.out.println("Days take "+String.valueOf(daysTaken));
 		System.out.println("Days remaining "+String.valueOf(daysTaken));
 	}
+	
+	public int getPrice() {
+		int price = 0;
+		for(int i=0;i<tool.size();i++) {
+			price = price + tool.get(i).getPrice();
+		}
+		return price;
+	}
 }
