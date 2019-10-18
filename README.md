@@ -21,9 +21,9 @@ $ cd Project-3/
 
 #### After you are in the directory Project-3/,
 
-$ javac src/hardwarerentalstore/hardwarerentalstore1.java
+$ javac src/hardwarerentalstore/HardwareRentalStore.java
 
-$ java src/hardwarerentalstore/hardwarerentalstore1
+$ java src/hardwarerentalstore/HardwareRentalStore
 
 Output file output.txt has been added. Please verify. Thank you!
 
