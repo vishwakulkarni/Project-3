@@ -10,6 +10,17 @@ import Customers.Customer;
 import Customers.RegularCustomer;
 
 
+/*
+ * 2) factory design pattern
+ * 
+ * Here we are using factory design pattern to get customers
+ * Limiting customer instance creation to 12
+ * Assigning customers to the ids as it will be easy to access
+ * 
+ * 
+ */
+
+
 public class CustomerFactory {
 	static List<Customer> customers = new ArrayList<Customer> (12);
 	

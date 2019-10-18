@@ -1,5 +1,11 @@
 package tools;
 
+/*
+ * Class Plumbing
+ * implements tool
+ * which has a per object cost of 7 and can only have 5 instances
+ */
+
 public class Plumbing implements Tool{
 
 	static final int price = 7;

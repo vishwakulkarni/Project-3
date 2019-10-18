@@ -10,6 +10,13 @@ import tools.Tool;
 import tools.Woodwork;
 import tools.Yardwork;
 
+
+/*
+ * 2) factory design pattern
+ * 
+ * Here we are using factory design pattern to get tools
+ * Tool factory will get you any king of tool if type is specified. 
+ */
 public class ToolFactory {
 
 	public static Tool getTool(String type,String name,int nytNo) {

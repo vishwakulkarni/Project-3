@@ -1,5 +1,12 @@
 package tools;
 
+
+/*
+ * Class Painting
+ * implements tool
+ * which has a per object cost of 5 and can only have 5 instances
+ */
+
 public class Painting implements Tool{
 
 	public static final int price = 5;

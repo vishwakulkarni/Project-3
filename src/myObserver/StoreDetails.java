@@ -8,6 +8,13 @@ import Rental.Record;
 import tools.Inventory;
 import tools.Tool;
 
+
+/*
+ * class Store details
+ * which stores all details and registers observers so that it notify them when data is changed
+ * 
+ */
+
 public class StoreDetails implements Subject {
 	
 	int day;

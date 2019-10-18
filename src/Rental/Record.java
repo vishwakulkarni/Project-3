@@ -6,6 +6,13 @@ import java.util.List;
 import Customers.Customer;
 import tools.Tool;
 
+
+/*
+ * Class Record
+ * 
+ * This is an template which holds all key entries of a transaction
+ * Like tools taken, add ons taken , customer who took it and days customer has taken.
+ */
 public class Record {
 	public Customer customer;
 	public List<Tool> tool = new ArrayList<Tool>();

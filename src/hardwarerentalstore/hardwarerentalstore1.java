@@ -1,6 +1,5 @@
 package hardwarerentalstore;
 
-import java.io.ObjectInputStream.GetField;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +17,16 @@ import tools.Plumbing;
 import tools.Tool;
 import tools.Woodwork;
 import tools.Yardwork;
+
+
+/*
+ * Class HardwareRentalStore
+ * This is main class which will perform all the operation and provide us with proper output.
+ * This class will initialise all the class like storedetails and observer like DisplayObserver.
+ * This will handle days and print collective results
+ * 
+ * 
+ */
 
 public class hardwarerentalstore1 {
 

@@ -7,6 +7,13 @@ import java.util.List;
 import Rental.Record;
 import tools.Inventory;
 
+/**
+ * 3) Observer Design Pattern
+ * class DisplayObserver
+ * This class will maintain all updated variables and display when requested
+ *  
+ *
+ */
 public class DisplayObserver implements Observer {
 	
 	int day;

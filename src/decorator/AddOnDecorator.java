@@ -2,6 +2,13 @@ package decorator;
 
 import tools.Tool;
 
+/* 
+ * 1) decorator design pattern
+ * 
+ * This is a decorator which we used to add accessory to the tools
+ * 
+ * */
+
 public class AddOnDecorator implements Tool {
 
 	 public Tool tool;
