@@ -26,3 +26,9 @@ $ javac src/hardwarerentalstore/hardwarerentalstore1.java
 $ java src/hardwarerentalstore/hardwarerentalstore1
 
 Output file output.txt has been added. Please verify. Thank you!
+
+## Test files:
+
+cd Project-3/test
+
+Here you will find testfiles for each one.
