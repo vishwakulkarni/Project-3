@@ -17,7 +17,7 @@ import tools.Inventory;
 public class DisplayObserver implements Observer {
 	
 	int day;
-	int []daysEarning = new int[31];
+	int []daysEarning = new int[37];
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
 	Inventory inventory;

@@ -18,7 +18,7 @@ import tools.Tool;
 public class StoreDetails implements Subject {
 	
 	int day;
-	int []daysEarning = new int[31];
+	int []daysEarning = new int[37];
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
 	Inventory inventory;
