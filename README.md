@@ -19,7 +19,7 @@ $ git clone https://github.com/vishwakulkarni/Project-3
 
 $ cd Project-3/
 
-#### After you are in the directory zookeeper/Zoo/,
+#### After you are in the directory Project-3/,
 
 $ javac src/hardwarerentalstore/hardwarerentalstore1.java
 
