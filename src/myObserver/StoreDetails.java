@@ -37,7 +37,6 @@ public class StoreDetails implements Subject {
 		this.inventory = inventory;
 		day = 1;
 		daysEarning[1] = 0;
-		daysEarning[1] = 0;
 		
 	}
 	
@@ -96,11 +95,11 @@ public class StoreDetails implements Subject {
     			activeOrder.remove(i);
     		}
 		}
-    	daysEarning[day] = 0;
+    	notifyObservers();
     	//active orders parse
     	// completed order parse
-    	notifyObservers();
     	day = day + 1;
+    	daysEarning[day] = 0;
     }
     
     public void updateDaysEarning(int earning)

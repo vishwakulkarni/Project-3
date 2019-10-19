@@ -63,7 +63,7 @@ public void display() {
 			System.out.println();
 		}
 		System.out.println("########################## Total Earning on Day "+ String.valueOf(day)+" : " +
-				String.valueOf(daysEarning[day])+ "$ ###########################" );
+				String.valueOf(daysEarning[day-1])+ "$ ###########################" );
 		
 		System.out.println();
 		

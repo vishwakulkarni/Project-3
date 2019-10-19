@@ -92,7 +92,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 2 : 0$ ###########################
+########################## Total Earning on Day 2 : 28$ ###########################
 
 **************************** Inventories before Day 3 ***************************** 
 
@@ -175,7 +175,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 3 : 0$ ###########################
+########################## Total Earning on Day 3 : 21$ ###########################
 
 **************************** Inventories before Day 4 ***************************** 
 
@@ -272,7 +272,7 @@ AddOn 1: ExtensionCord
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 4 : 0$ ###########################
+########################## Total Earning on Day 4 : 30$ ###########################
 
 **************************** Inventories before Day 5 ***************************** 
 
@@ -393,7 +393,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 5 : 0$ ###########################
+########################## Total Earning on Day 5 : 62$ ###########################
 
 **************************** Inventories before Day 6 ***************************** 
 
@@ -511,7 +511,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 6 : 0$ ###########################
+########################## Total Earning on Day 6 : 54$ ###########################
 
 **************************** Inventories before Day 7 ***************************** 
 
@@ -793,7 +793,7 @@ AddOn 2:
 Total Renting Days: 3
 Total Remaining Days: 0
 
-########################## Total Earning on Day 8 : 0$ ###########################
+########################## Total Earning on Day 8 : 62$ ###########################
 
 **************************** Inventories before Day 9 ***************************** 
 
@@ -964,7 +964,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 9 : 0$ ###########################
+########################## Total Earning on Day 9 : 27$ ###########################
 
 **************************** Inventories before Day 10 ***************************** 
 
@@ -1133,7 +1133,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 10 : 0$ ###########################
+########################## Total Earning on Day 10 : 50$ ###########################
 
 **************************** Inventories before Day 11 ***************************** 
 
@@ -1512,7 +1512,7 @@ AddOn 2:
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 12 : 0$ ###########################
+########################## Total Earning on Day 12 : 30$ ###########################
 
 **************************** Inventories before Day 13 ***************************** 
 
@@ -1719,7 +1719,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 13 : 0$ ###########################
+########################## Total Earning on Day 13 : 21$ ###########################
 
 **************************** Inventories before Day 14 ***************************** 
 
@@ -1941,7 +1941,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 14 : 0$ ###########################
+########################## Total Earning on Day 14 : 21$ ###########################
 
 **************************** Inventories before Day 15 ***************************** 
 
@@ -2178,7 +2178,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 15 : 0$ ###########################
+########################## Total Earning on Day 15 : 62$ ###########################
 
 **************************** Inventories before Day 16 ***************************** 
 
@@ -2430,7 +2430,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 16 : 0$ ###########################
+########################## Total Earning on Day 16 : 55$ ###########################
 
 **************************** Inventories before Day 17 ***************************** 
 
@@ -2705,7 +2705,7 @@ AddOn 1: ExtensionCord
 Total Renting Days: 5
 Total Remaining Days: 0
 
-########################## Total Earning on Day 17 : 0$ ###########################
+########################## Total Earning on Day 17 : 65$ ###########################
 
 **************************** Inventories before Day 18 ***************************** 
 
@@ -2977,7 +2977,7 @@ AddOn 1: ExtensionCord
 Total Renting Days: 5
 Total Remaining Days: 0
 
-########################## Total Earning on Day 18 : 0$ ###########################
+########################## Total Earning on Day 18 : 51$ ###########################
 
 **************************** Inventories before Day 19 ***************************** 
 
@@ -3555,7 +3555,7 @@ AddOn 1: ExtensionCord
 Total Renting Days: 5
 Total Remaining Days: 0
 
-########################## Total Earning on Day 20 : 0$ ###########################
+########################## Total Earning on Day 20 : 30$ ###########################
 
 **************************** Inventories before Day 21 ***************************** 
 
@@ -3863,7 +3863,7 @@ AddOn 1: ExtensionCord
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 21 : 0$ ###########################
+########################## Total Earning on Day 21 : 24$ ###########################
 
 **************************** Inventories before Day 22 ***************************** 
 
@@ -4174,7 +4174,7 @@ AddOn 2:
 Total Renting Days: 5
 Total Remaining Days: 0
 
-########################## Total Earning on Day 22 : 0$ ###########################
+########################## Total Earning on Day 22 : 62$ ###########################
 
 **************************** Inventories before Day 23 ***************************** 
 
@@ -4844,7 +4844,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 24 : 0$ ###########################
+########################## Total Earning on Day 24 : 62$ ###########################
 
 **************************** Inventories before Day 25 ***************************** 
 
@@ -5186,7 +5186,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 25 : 0$ ###########################
+########################## Total Earning on Day 25 : 30$ ###########################
 
 **************************** Inventories before Day 26 ***************************** 
 
@@ -5932,7 +5932,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 27 : 0$ ###########################
+########################## Total Earning on Day 27 : 59$ ###########################
 
 **************************** Inventories before Day 28 ***************************** 
 
@@ -6318,7 +6318,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 5
 Total Remaining Days: 0
 
-########################## Total Earning on Day 28 : 0$ ###########################
+########################## Total Earning on Day 28 : 30$ ###########################
 
 **************************** Inventories before Day 29 ***************************** 
 
@@ -6715,7 +6715,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 29 : 0$ ###########################
+########################## Total Earning on Day 29 : 32$ ###########################
 
 **************************** Inventories before Day 30 ***************************** 
 
@@ -7126,7 +7126,7 @@ AddOn 1: ProtectiveGearPack
 Total Renting Days: 4
 Total Remaining Days: 0
 
-########################## Total Earning on Day 30 : 0$ ###########################
+########################## Total Earning on Day 30 : 30$ ###########################
 
 **************************** Inventories before Day 31 ***************************** 
 
@@ -7977,7 +7977,7 @@ AddOn 3:
 Total Renting Days: 7
 Total Remaining Days: 0
 
-########################## Total Earning on Day 32 : 0$ ###########################
+########################## Total Earning on Day 32 : 30$ ###########################
 
 **************************** Inventories before Day 33 ***************************** 
 
@@ -8855,7 +8855,7 @@ AddOn 2: ProtectiveGearPack
 Total Renting Days: 2
 Total Remaining Days: 0
 
-########################## Total Earning on Day 34 : 0$ ###########################
+########################## Total Earning on Day 34 : 30$ ###########################
 
 **************************** Inventories before Day 35 ***************************** 
 
