@@ -10,7 +10,7 @@ Vishwanath Kulkarni
 Sitesh Ranjan
 
 ## References and Discussion:
-Discussed with Shreyas and his team for the idea of implementing decorator patterns and factory pattern.
+Discussed with Shreyas and his team, Pradyut and his team for the idea of implementing decorator patterns and factory pattern.
 
 
 ## How to run the code
