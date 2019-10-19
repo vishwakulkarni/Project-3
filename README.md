@@ -15,13 +15,28 @@ Sitesh Ranjan
 
 $ git clone https://github.com/vishwakulkarni/Project-3
 
+#### Open Ecliplse (if not installed , please follow this insstruction to install https://www.eclipse.org/downloads/packages/
+
+1) import our project from wizard.
+2) right click on HardwareRentalStore.java 
+3) Run As-> Java Application 
+
+output will be on console ..
+
+
+#### less stable running method below 
+
+#### Download the repository:
+
+$ git clone https://github.com/vishwakulkarni/Project-3
+
 #### Go to the directory:
 
 $ cd Project-3/
 
 #### After you are in the directory Project-3/,
 
-$ javac src/hardwarerentalstore/HardwareRentalStore.java
+$ javac -cp src src/hardwarerentalstore/HardwareRentalStore.java
 
 $ java src/hardwarerentalstore/HardwareRentalStore
 
