@@ -1,6 +1,7 @@
 package hardwarerentalstore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import Accessory.AccessoryKit;
@@ -922,8 +923,58 @@ public class HardwareRentalStore {
 		earnings[details.getDay()] = price;
 		details.updateDaysEarning(earnings[details.getDay()]);
 		details.dayChanged();
+		//expiring all active orders as question says we need to consider orders on last day also
+		details.expireAllActiveOrders();
 		
 		
+		//Printing total spend based by each type of customers
+		
+		int []customerTypeOrder = new int[3];
+		int []earningsPerCustomer = new int[3];
+		for(int i=0;i<3;i++) {
+			customerTypeOrder[i]=0;
+		}
+		String type;
+		int j=0;
+		for(Record r : details.getCompletedOrders()) {
+			type = r.customer.getCustomerType();
+			j=j+1;
+			if(type=="Casual Customer") {
+				customerTypeOrder[0]=customerTypeOrder[0]+1;
+				earningsPerCustomer[0] = earningsPerCustomer[0] +r.getPrice();
+			}
+			else if(type=="Regular Customer") {
+				customerTypeOrder[1]=customerTypeOrder[1]+1;
+				earningsPerCustomer[1] = earningsPerCustomer[1]+ r.getPrice();
+			}
+			else if(type=="Buisness Customer") {
+				customerTypeOrder[2]=customerTypeOrder[2]+1;
+				earningsPerCustomer[2] = earningsPerCustomer[2] + r.getPrice();
+			}
+			else {
+				System.out.println(r.customer.getCustomerType());
+			}
+		}
+		System.out.println("################################# Completed Orders "+
+				" ###################################");
+		System.out.println("################################# Total "+ details.getCompletedOrders().size() +
+				" ###################################");
+		System.out.println("################################# Casual Customer  "+ customerTypeOrder[0] +
+				" ###################################");
+		System.out.println("################################# Regular Customer  "+ customerTypeOrder[1] +
+				" ###################################");
+		System.out.println("################################# Buisness Customer  "+ customerTypeOrder[2] +
+				" ###################################");
+		
+		int totalEarnings = earningsPerCustomer[0] + earningsPerCustomer[1] +earningsPerCustomer[2];
+		System.out.println("################################# Total Earnings of store  "+ totalEarnings +
+				" ###################################");
+		System.out.println("################################# Earnings from Casual Customer  "+ earningsPerCustomer[0] +
+				" ###################################");
+		System.out.println("################################# Earnings from Regular Customer  "+ earningsPerCustomer[1] +
+				" ###################################");
+		System.out.println("################################# Earnings from Buisness Customer  "+ earningsPerCustomer[2] +
+				" ###################################");
 
 	}
 

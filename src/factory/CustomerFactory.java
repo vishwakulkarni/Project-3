@@ -39,15 +39,15 @@ public class CustomerFactory {
 public static Customer getCustomerWithId(int id) {
 	
 	for(int i=0;i<5;i++) {
-		customers.add(new RegularCustomer("R_customer_"+String.valueOf(i)));
+		customers.add(new RegularCustomer("Regular_customer_"+String.valueOf(i)));
 	}
 	
 	for(int i=5;i<9;i++) {
-		customers.add(new CasualCustomer("C_customer_"+String.valueOf(i)));
+		customers.add(new CasualCustomer("Casual_customer_"+String.valueOf(i)));
 	}
 	
 	for(int i=9;i<12;i++) {
-		customers.add(new BusinessCustomer("B_customer_"+String.valueOf(i)));
+		customers.add(new BusinessCustomer("Business_customer_"+String.valueOf(i)));
 	}
 
 

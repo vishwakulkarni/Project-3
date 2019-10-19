@@ -34,28 +34,45 @@ public class DisplayObserver implements Observer {
 		this.completedOrders = completedOrders;
 		this.activeOrder = activeOrder;
 		this.inventory = inventory;
-		System.out.println("updating from displayOvserver");
 		this.display();
 		
 	}
 	
-	public void display() {
-		//update this display function
-		System.out.println("---------------------");
-		System.out.println("Day "+String.valueOf(day));
-		System.out.println("Days Earning " + String.valueOf(daysEarning[day-1]) );
-		System.out.println("Completed Orders are: "+String.valueOf(completedOrders.size())+" count");
-		for(int i=0;i<completedOrders.size();i++) {
-			completedOrders.get(i).print();
-		}
-		System.out.println("Active Orders are: "+String.valueOf(activeOrder.size())+" count");
+public void display() {
+		
+		
+		System.out.println("*********************** Active Order Placed by Customer ***************************");
+		System.out.println();
+		System.out.println("Total Active Orders: "+ String.valueOf(activeOrder.size()));
+		System.out.println();
 		for(int i=0;i<activeOrder.size();i++) {
-			System.out.println("order number :"+String.valueOf(i));
+			// System.out.println("order number :"+String.valueOf(i));
+			System.out.println("Active Order "+(i+1)+": ");
+			System.out.println("------------------------------------");
 			activeOrder.get(i).print();
+			System.out.println();
 		}
-		System.out.println("---------------------");
-		System.out.println("Inventories remaining are: ");
+		
+		System.out.println("**************************** Completed Order by Day "+ String.valueOf(day)+" *****************************");
+		System.out.println();
+		System.out.println("Total Completed Orders: "+ String.valueOf(completedOrders.size()));
+		System.out.println();
+		for(int i=0;i<completedOrders.size();i++) {
+			System.out.println("Completed Order "+(i+1)+": ");
+			System.out.println("------------------------------------");
+			completedOrders.get(i).print();
+			System.out.println();
+		}
+		System.out.println("########################## Total Earning on Day "+ String.valueOf(day)+" : " +
+				String.valueOf(daysEarning[day])+ "$ ###########################" );
+		
+		System.out.println();
+		
+		System.out.println("**************************** Inventories before Day "+ String.valueOf(day+1)
+				+" ***************************** ");
+		System.out.println();
 		this.inventory.display();
+		System.out.println();
 	}
 
 }

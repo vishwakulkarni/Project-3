@@ -44,7 +44,7 @@ public class Inventory {
 			}
 			// System.out.println(painting.type);
 		}
-		System.out.println("Painting tool remaining: "+String.valueOf(count));
+		System.out.println("Painting tool remaining: "+String.valueOf(count)+"/5");
 	}
 	
 	public void getPlumbingTool()
@@ -58,7 +58,7 @@ public class Inventory {
 			}
 			// System.out.println(painting.type);
 		}
-		System.out.println("Plumbing tool remaining: "+String.valueOf(count));
+		System.out.println("Plumbing tool remaining: "+String.valueOf(count)+"/5");
 	}
 	
 	public void getConcreteTool()
@@ -74,7 +74,7 @@ public class Inventory {
 			}
 			// System.out.println(painting.type);
 		}
-		System.out.println("Concrete tool remaining: "+String.valueOf(count));
+		System.out.println("Concrete tool remaining: "+String.valueOf(count)+"/5");
 	}
 	
 	public void getWoodworkTool()
@@ -88,7 +88,7 @@ public class Inventory {
 			}
 			// System.out.println(painting.type);
 		}
-		System.out.println("Woodwork tool remaining: "+String.valueOf(count));
+		System.out.println("Woodwork tool remaining: "+String.valueOf(count)+"/5");
 	}
 	
 	public void getYardworkTool()
@@ -102,7 +102,7 @@ public class Inventory {
 			}
 			// System.out.println(painting.type);
 		}
-		System.out.println("Yardwork tool remaining: "+String.valueOf(count));
+		System.out.println("Yardwork tool remaining: "+String.valueOf(count)+"/4");
 	}
 	
 	public void display() {

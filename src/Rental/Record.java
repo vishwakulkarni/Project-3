@@ -27,14 +27,18 @@ public class Record {
 	}
 	
 	public void print() {
-		System.out.println("Customer name "+this.customer.getName());
-		System.out.println("Tools taken "+String.valueOf(tool.size()));
+		System.out.println("Customer name: "+this.customer.getName());
+		System.out.println();
+		System.out.println("Tools Taken : ");
 		for(int i=0;i<tool.size();i++) {
-			System.out.println("Tool Name: "+this.tool.get(i).getName());
-			System.out.println("AddOn Name: "+this.tool.get(i).getAddOn());
+			System.out.println("Tool "+(i+1)+": " +this.tool.get(i).getName());
+			System.out.println("AddOn "+(i+1)+": " +this.tool.get(i).getAddOn());
 		}
-		System.out.println("Days take "+String.valueOf(daysTaken));
-		System.out.println("Days remaining "+String.valueOf(daysTaken));
+		System.out.println();
+		System.out.println("Total Renting Days: "+String.valueOf(daysTaken));
+		System.out.println("Total Remaining Days: "+String.valueOf(daysRemaining));
+
+
 	}
 	
 	public int getPrice() {

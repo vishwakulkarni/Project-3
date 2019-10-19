@@ -21,6 +21,7 @@ public class StoreDetails implements Subject {
 	int []daysEarning = new int[37];
 	List <Record> completedOrders = new ArrayList<Record>();
 	List <Record> activeOrder = new ArrayList<Record>();
+	ArrayList<Observer> observerList;
 	Inventory inventory;
 	
 	public Inventory getInventory() {
@@ -31,8 +32,6 @@ public class StoreDetails implements Subject {
 		this.inventory = inventory;
 	}
 
-	ArrayList<Observer> observerList;
-
 	public StoreDetails(Inventory inventory) {
 		observerList = new ArrayList<Observer>();
 		this.inventory = inventory;
@@ -40,6 +39,10 @@ public class StoreDetails implements Subject {
 		daysEarning[1] = 0;
 		daysEarning[1] = 0;
 		
+	}
+	
+	public List <Record> getCompletedOrders() {
+		return completedOrders;
 	}
   
 	@Override
@@ -80,7 +83,6 @@ public class StoreDetails implements Subject {
     }
     
     public void dayChanged() {
-    	day = day + 1;
     	//save days earning in an hashmap
     	for(int i=0;i<activeOrder.size();i++) {
     		activeOrder.get(i).daysRemaining = activeOrder.get(i).daysRemaining - 1;
@@ -98,12 +100,19 @@ public class StoreDetails implements Subject {
     	//active orders parse
     	// completed order parse
     	notifyObservers();
-    	
+    	day = day + 1;
     }
     
     public void updateDaysEarning(int earning)
     {
     	this.daysEarning[day] = earning;
+    }
+    
+    public void expireAllActiveOrders() {
+    	for(int i=0;i<activeOrder.size();i++) {
+    		completedOrders.add(activeOrder.get(i));
+			activeOrder.remove(i);
+    	}
     }
     
     public Inventory checkExpiredOrder(Inventory toolsInventory)
