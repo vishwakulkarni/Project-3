@@ -38,7 +38,7 @@ $ cd Project-3/
 
 $ javac -cp src src/hardwarerentalstore/HardwareRentalStore.java
 
-$ java src/hardwarerentalstore/HardwareRentalStore
+$ java src.hardwarerentalstore.HardwareRentalStore
 
 Output file output.txt has been added. Please verify. Thank you!
 
