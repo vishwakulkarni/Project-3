@@ -1,14 +1,13 @@
 package hardwarerentalstore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-import Accessory.AccessoryKit;
-import Accessory.ExtensionCord;
-import Accessory.ProtectiveGearPack;
 import Customers.Customer;
 import Rental.Record;
+import addons.AccessoryKit;
+import addons.ExtensionCord;
+import addons.ProtectiveGearPack;
 import factory.CustomerFactory;
 import factory.ToolFactory;
 import myObserver.DisplayObserver;
@@ -35,13 +34,13 @@ public class HardwareRentalStore {
 
 		//creating inventory
 		for(int i =0;i<5;i++) {
-			paintings.add((Painting)ToolFactory.getTool("Painting", "Painting tool "+String.valueOf(i), 1));
-			woodworks.add((Woodwork)ToolFactory.getTool("Woodwork", "Woodwork tool "+String.valueOf(i), 1));
-			plumbings.add((Plumbing)ToolFactory.getTool("Plumbing", "Plumbing tool "+String.valueOf(i), 1));
-			concretes.add((Concrete)ToolFactory.getTool("Concrete", "Concrete tool "+String.valueOf(i), 1));
+			paintings.add((Painting)ToolFactory.getTool("Painting", "Painting tool "+String.valueOf(i)));
+			woodworks.add((Woodwork)ToolFactory.getTool("Woodwork", "Woodwork tool "+String.valueOf(i)));
+			plumbings.add((Plumbing)ToolFactory.getTool("Plumbing", "Plumbing tool "+String.valueOf(i)));
+			concretes.add((Concrete)ToolFactory.getTool("Concrete", "Concrete tool "+String.valueOf(i)));
 		}
 		for (int i=0;i<4;i++) {
-			yardworks.add((Yardwork)ToolFactory.getTool("Yardwork", "Yardwork tool "+String.valueOf(i), 1));
+			yardworks.add((Yardwork)ToolFactory.getTool("Yardwork", "Yardwork tool "+String.valueOf(i)));
 		}
 		
 		Inventory toolsInventory = new Inventory(paintings,plumbings,concretes,woodworks,yardworks);

@@ -30,13 +30,13 @@ public class StoreDetailsTest {
 	@Before
 	public void setUp() throws Exception {
 		for(int i =0;i<5;i++) {
-			paintings.add((Painting)ToolFactory.getTool("Painting", "Painting tool "+String.valueOf(i), 1));
-			woodworks.add((Woodwork)ToolFactory.getTool("Woodwork", "Woodwork tool "+String.valueOf(i), 1));
-			plumbings.add((Plumbing)ToolFactory.getTool("Plumbing", "Plumbing tool "+String.valueOf(i), 1));
-			concretes.add((Concrete)ToolFactory.getTool("Concrete", "Concrete tool "+String.valueOf(i), 1));
+			paintings.add((Painting)ToolFactory.getTool("Painting", "Painting tool "+String.valueOf(i)));
+			woodworks.add((Woodwork)ToolFactory.getTool("Woodwork", "Woodwork tool "+String.valueOf(i)));
+			plumbings.add((Plumbing)ToolFactory.getTool("Plumbing", "Plumbing tool "+String.valueOf(i)));
+			concretes.add((Concrete)ToolFactory.getTool("Concrete", "Concrete tool "+String.valueOf(i)));
 		}
 		for (int i=0;i<4;i++) {
-			yardworks.add((Yardwork)ToolFactory.getTool("Yardwork", "Yardwork tool "+String.valueOf(i), 1));
+			yardworks.add((Yardwork)ToolFactory.getTool("Yardwork", "Yardwork tool "+String.valueOf(i)));
 		}
 		Inventory inventory = new Inventory(paintings, plumbings, concretes, woodworks, yardworks);
 		subject = new StoreDetails(inventory);

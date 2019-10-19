@@ -14,7 +14,7 @@ public class CustomerFactoryTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		c = CustomerFactory.getCustomer("RegularCustomer", "R_Customer");
+		c = CustomerFactory.getCustomerWithId(4);
 	}
 
 	@After
@@ -23,7 +23,7 @@ public class CustomerFactoryTest {
 
 	@Test
 	public final void testGetCustomerName() {
-		assertEquals("R_Customer", c.getName());
+		assertEquals("Regular_customer_4", c.getName());
 	}
 
 	@Test

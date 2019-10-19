@@ -13,18 +13,16 @@ public class Plumbing implements Tool{
 	static int count = 5;
 	public String type = "Plumbing";
 	public String name;
-	int nytNo;
 	
-	private Plumbing(String name,int nytNo){
+	private Plumbing(String name){
 		this.name=name;
-		this.nytNo=nytNo;
 	}
 	
-	public static Tool getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name) {
 		
-		if(count >= 1) {
+		if(count > 0) {
 			count--;
-			return new Plumbing(name,nytNo);
+			return new Plumbing(name);
 		}
 		else {
 			return null;
@@ -39,7 +37,7 @@ public class Plumbing implements Tool{
 	@Override
 	public int getPrice() {
 		
-		return price*nytNo;
+		return price;
 	}
 	
 	

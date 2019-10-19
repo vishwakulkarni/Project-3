@@ -13,19 +13,16 @@ public class Painting implements Tool{
 	public String name;
 	public static int count = 5;
 	public String type = "Painting";
-	int nytNo;
 	
-	private Painting(String name,int nytNo){
+	private Painting(String name){
 		this.name=name;
-		this.nytNo=nytNo;
-		
 	}
 	
-	public static Tool getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name) {
 		
 		if(count >= 1) {
 			count--;
-			return new Painting(name,nytNo);
+			return new Painting(name);
 		}
 		else {
 			return null;
@@ -40,7 +37,7 @@ public class Painting implements Tool{
 	@Override
 	public int getPrice() {
 		
-		return price*nytNo;
+		return price;
 	}
 	
 	@Override
@@ -51,7 +48,6 @@ public class Painting implements Tool{
 
 	@Override
 	public String getAddOn() {
-		// TODO Auto-generated method stub
 		return "";
 	}
 	

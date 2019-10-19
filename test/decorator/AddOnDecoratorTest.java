@@ -14,7 +14,7 @@ public class AddOnDecoratorTest {
 
 	@Before
 	public void setUp() throws Exception {
-		Tool painting = ToolFactory.getTool("painting", "painting tool 1", 1);
+		Tool painting = ToolFactory.getTool("painting", "painting tool 1");
 		ad = new AddOnDecorator(painting, 4, "AccessoryKit");
 	}
 

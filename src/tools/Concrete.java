@@ -13,17 +13,15 @@ public class Concrete implements Tool{
 	public String name;
 	static int count = 5;
 	public String type = "Concrete";
-	int nytNo;
-	private  Concrete(String name,int nytNo){
+	private  Concrete(String name){
 		this.name = name;
-		this.nytNo=nytNo;
 	}
 	
-	public static Tool getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name) {
 		
-		if(count >= 1) {
+		if(count > 0) {
 			count = count-1;
-			return new Concrete(name,nytNo);
+			return new Concrete(name);
 		}
 		else {
 			return null;
@@ -38,7 +36,7 @@ public class Concrete implements Tool{
 	@Override
 	public int getPrice() {
 		
-		return price*nytNo;
+		return price;
 	}
 	
 	@Override
@@ -49,7 +47,6 @@ public class Concrete implements Tool{
 	
 	@Override
 	public String getAddOn() {
-		// TODO Auto-generated method stub
 		return "";
 	}
 }

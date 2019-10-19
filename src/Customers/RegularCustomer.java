@@ -1,6 +1,5 @@
 package Customers;
 
-
 /*
  * Regular Customer class
  * This extends Customer interface
@@ -9,8 +8,8 @@ package Customers;
 public class RegularCustomer extends Customer {
 
 	public RegularCustomer(String name) {
-		
-		this.name=name;
+
+		this.name = name;
 		this.CustomerType = "Regular Customer";
 	}
 

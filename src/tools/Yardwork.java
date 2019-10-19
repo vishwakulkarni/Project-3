@@ -13,18 +13,16 @@ public class Yardwork implements Tool{
 	static int count = 4;
 	public String type = "Yardwork";
 	public String name;
-	int nytNo;
 	
-	private Yardwork(String name,int nytNo){
+	private Yardwork(String name){
 		this.name=name;
-		this.nytNo = nytNo;
 	}
 	
-	public static Tool getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name) {
 		
-		if(count >= 1) {
+		if(count >0) {
 			count--;
-			return new Yardwork(name,nytNo);
+			return new Yardwork(name);
 		}
 		else {
 			return null;
@@ -39,7 +37,7 @@ public class Yardwork implements Tool{
 	@Override
 	public int getPrice() {
 		
-		return price*nytNo;
+		return price;
 	}
 	
 	@Override

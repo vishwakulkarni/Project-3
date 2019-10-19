@@ -40,7 +40,6 @@ public class AddOnDecorator implements Tool {
 
 	@Override
 	public String getAddOn() {
-		// TODO Auto-generated method stub
 		return this.addOn;
 	}
 

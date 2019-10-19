@@ -13,18 +13,16 @@ public class Woodwork implements Tool{
 	static int count = 5;
 	public String type = "Woodwork";
 	public String name;
-	int nytNo;
 	
-	private Woodwork(String name,int nytNo){
+	private Woodwork(String name){
 		this.name=name;
-		this.nytNo = nytNo;
 	}
 	
-	public static Tool getInstance(String name,int nytNo) {
+	public static Tool getInstance(String name) {
 		
-		if(count >= 1) {
+		if(count >0) {
 			count--;
-			return new Woodwork(name,nytNo);
+			return new Woodwork(name);
 		}
 		else {
 			return null;
@@ -39,7 +37,7 @@ public class Woodwork implements Tool{
 	@Override
 	public int getPrice() {
 		
-		return price*nytNo;
+		return price;
 	}
 	
 	
@@ -51,7 +49,6 @@ public class Woodwork implements Tool{
 	
 	@Override
 	public String getAddOn() {
-		// TODO Auto-generated method stub
 		return "";
 	}
 }

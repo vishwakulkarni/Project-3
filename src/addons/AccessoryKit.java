@@ -1,4 +1,4 @@
-package Accessory;
+package addons;
 
 import decorator.AddOnDecorator;
 import tools.Tool;
