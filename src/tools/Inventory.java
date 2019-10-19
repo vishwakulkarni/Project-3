@@ -3,8 +3,6 @@ package tools;
 import java.util.ArrayList;
 import java.util.List;
 
-import factory.ToolFactory;
-
 public class Inventory {
 	
 	List<Painting> paintings = new ArrayList<Painting> (5);

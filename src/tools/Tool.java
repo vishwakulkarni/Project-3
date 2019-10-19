@@ -8,7 +8,6 @@ package tools;
 public interface Tool {
 
 	public int getPrice();
-	public void increaseCount();
 	public String getName();
 	public String getAddOn();
 

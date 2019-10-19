@@ -41,12 +41,6 @@ public class Painting implements Tool{
 	}
 	
 	@Override
-	public void increaseCount() {
-		
-		 count = count+1;
-	}
-
-	@Override
 	public String getAddOn() {
 		return "";
 	}

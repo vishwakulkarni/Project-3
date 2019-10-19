@@ -40,12 +40,6 @@ public class Plumbing implements Tool{
 		return price;
 	}
 	
-	
-	@Override
-	public void increaseCount() {
-		
-		 count = count+1;
-	}
 	@Override
 	public String getAddOn() {
 		// TODO Auto-generated method stub
